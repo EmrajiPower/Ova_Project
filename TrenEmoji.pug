@@ -1,0 +1,17 @@
+- var blocks = 45;
+- var plates = 22;
+
+.container
+  .surface
+    - for (var b = 1;b <= blocks;++b) {
+      div(class="block b" + b)
+        .block-inner
+          .back
+          .front
+          .left
+          .right
+          .top
+    - }
+    - for (var p = 1;p <= plates;++p) {
+      div(class="plate p" + p)
+    - }
