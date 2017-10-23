@@ -1,0 +1,85 @@
+body{
+  margin-top: 10px;
+  height: 633px;
+  background: linear-gradient(#668cff,#4d79ff,#3366ff,#1a53ff,#0033cc);
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+/*.contenedor-ova{   el . (punto) es para seleccionar clases.
+  width: 100%;
+	margin-top: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+}*/
+
+h1{
+  background-color: skyblue;
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+
+h2{
+  font-size: medium;
+  text-align: center;
+  line-height: normal;
+	margin-left: 20vh;
+  margin-right: 20vh;
+  background-color: skyblue;
+  border: 2px solid black;
+}
+
+#img1{
+  margin: 0 auto; /* Centro Imagen*/
+  display: block;/* La Dejo donde está*/
+  /*border: 1px solid black;*/
+  width: 380px;
+  height: 380px;
+}
+
+#img2{
+  display: none;
+  width: 380px;
+  height: 380px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cargando-animacion{
+  /*width: 100vw;*/
+	text-align: center;
+	color: #000000;
+	margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 550px;
+  margin-right: 550px;
+	animation: texto-intermitente 0.90s infinite alternate;
+  border: 1px solid black;
+  border-radius: 33%;
+  background-color: skyblue;
+}
+
+@keyframes texto-intermitente {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+#footer-ova { /* El selector de ID es #*/
+  margin: 0 auto;
+	width: 80.4%; /* La linea que tengo en el pie de página*/
+	text-align: center;
+	padding-top: 1px; /* El espacio que hay entre este elemento y el que viene up*/
+	border-top: 2px solid black;
+  min-height: 5vh;
+}
+
+.cuerpo-ova{
+
+}
