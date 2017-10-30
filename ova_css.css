@@ -1,0 +1,181 @@
+body{
+  margin-top: 10px;
+  height: 633px;
+  background: linear-gradient(#668cff,#4d79ff,#3366ff,#1a53ff,#0033cc);
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1{
+  background-color: skyblue;
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+
+h2{
+  font-size: medium;
+  text-align: center;
+  line-height: normal;
+	margin-left: 20vh;
+  margin-right: 20vh;
+  background-color: skyblue;
+  border: 2px solid black;
+}
+
+#img1{
+  margin: 0 auto; /* Centro Imagen*/
+  display: block;/* La Dejo donde está*/
+  /*border: 1px solid black;*/
+  width: 380px;
+  height: 380px;
+}
+
+#canvas{
+  display: none;
+  border: 1px solid black;
+  background-color: skyblue;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cargando-animacion{
+  /*width: 100vw;*/
+	text-align: center;
+	color: #000000;
+	margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 550px;
+  margin-right: 550px;
+	animation: texto-intermitente 0.90s infinite alternate;
+  border: 1px solid black;
+  border-radius: 33%;
+  background-color: skyblue;
+}
+
+@keyframes texto-intermitente {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.botones{
+  align-items: center;
+  background-color: #3C4858;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.boton{
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  height: 50px;
+  justify-content: center;
+  padding: 0 12px;
+  position: relative;
+  margin-bottom: 20px;
+  user-select: none;
+  width: 80%;
+  will-change: transform;
+  z-index: 0;
+
+    @media screen and (min-width: 400px){
+      width: 400px;
+    }
+
+  &::before{
+    border-radius: 6px;
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::after{
+    content: '';
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.boton:hover{
+  transform: translateY(2px);
+}
+
+.boton:hover::before{
+  transform: translateY(-2px);
+}
+
+.boton:active{
+  transform: translateY(8px);
+  transition: none;
+}
+
+.boton:active::before{
+  transform: translateY(-8px);
+  transition: none;
+}
+
+.boton,
+.boton::before,
+.boton:after{
+  transition: all 0.5s cubic-bezier(0,1,0.3,1);
+}
+
+.boton.primero {
+  &::before{
+    background-color: #32935D;
+  }
+  &::after{
+    background-color: #12C561;
+  }
+}
+
+.boton.segundo {
+  &::before{
+    background-color: #A22F21;
+  }
+  &::after{
+    background-color: #DD503F;
+  }
+}
+
+.boton.tercero {
+  &::before{
+    background-color: #397090;
+  }
+  &::after{
+    background-color: #2CAFFC;
+  }
+
+}
+
+#footer-ova { /* El selector de ID es #*/
+  margin: 0 auto;
+	width: 80.4%; /* La linea que tengo en el pie de página*/
+	text-align: center;
+	padding-top: 1px; /* El espacio que hay entre este elemento y el que viene up*/
+	border-top: 2px solid black;
+  min-height: 5vh;
+}
