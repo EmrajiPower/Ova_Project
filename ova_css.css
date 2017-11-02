@@ -1,0 +1,131 @@
+body{
+  margin-top: 10px;
+  height: 633px;
+  background: linear-gradient(#668cff,#4d79ff,#3366ff,#1a53ff,#0033cc);
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+h1{
+  background-color: skyblue;
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+
+h2{
+  font-size: medium;
+  text-align: center;
+  line-height: normal;
+	margin-left: 20vh;
+  margin-right: 20vh;
+  background-color: skyblue;
+  border: 2px solid black;
+}
+
+#img1{
+  margin: 0 auto; /* Centro Imagen*/
+  display: block;/* La Dejo donde está*/
+  /*border: 1px solid black;*/
+  width: 380px;
+  height: 380px;
+}
+
+#canvas{
+  display: none;
+  border: 1px solid black;
+  background-color: skyblue;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cargando-animacion{
+  /*width: 100vw;*/
+	text-align: center;
+	color: #000000;
+	margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 550px;
+  margin-right: 550px;
+	animation: texto-intermitente 0.90s infinite alternate;
+  border: 1px solid black;
+  border-radius: 33%;
+  background-color: skyblue;
+}
+
+@keyframes texto-intermitente {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.botones{
+  display: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+.boton{
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 5px;
+  align-items: center;
+  background: linear-gradient(top,  #2299ff 0%,#1c7dcc 100%);
+  background-color: #2299ff;
+  cursor: pointer;
+  border-style: ridge;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  height: 60px;
+  justify-content: center;
+  padding: 0 12px;
+  position: relative;
+  margin-bottom: 20px;
+  user-select: none;
+  width: 20%;
+  transition: 0s 0.7s;
+    /*@media screen and (min-width: 400px){
+      width: 400px;
+    }*/
+  }
+
+.boton.primero:active, .boton.segundo:active, .boton.tercero:active{
+  background:#17B;
+  box-shadow: 0 3px 3px #049 inset, 0 1px 0 #777;
+  padding-top:11px;
+  padding-bottom:9px;
+  transition: 0s;
+}
+
+.boton.primero:before, .boton.segundo:before, .boton.tercero:before{
+ content:'';
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 0px;
+ height: 58px;
+ background: rgba(255,255,255,0.3);
+ border-radius: 5px;
+ transition: all 1.2s ease;
+}
+
+.boton.primero:hover::before, .boton.segundo:hover::before, .boton.tercero:hover::before{
+  width: 100%;
+}
+
+#footer-ova {
+  margin: 0 auto;
+	width: 80.4%;
+	text-align: center;
+	padding-top: 1px;
+	border-top: 2px solid black;
+  min-height: 5vh;
+}
